@@ -4,9 +4,10 @@
 
 ELMo is created by AllenNLP which provides the contextualized word embeddings whose vector representation for a word differs in a sentence to sentence.
 
-Now let’s see the real-life application of EMLo embedding, suppose  you are looking for ‘sony’ on goolge then it predicts 'liv'and 'six liv' in order to make the result more precise and now you would be able to get what you want thus making our lives more easier.
-
 ELMo is a deep contextualized word representation that models both complex characteristics of word use, and how these uses vary across linguistic contexts. These word vectors are learned functions of the internal states of a deep bidirectional language model, which is pre-trained on a large text corpus.
+
+Now let’s see the real-life application of EMLo embedding, suppose  you are looking for ‘sony’ on google then it predicts 'liv'and 'six liv' in order to make the result more precise, which would making our lives more easier. 
+
 ## What is Word Embedding?
 
 A word embedding is a learned representation for text where words that have the same meaning have a similar representation.
@@ -33,7 +34,7 @@ The core problem that embeddings solve is generalisation.
 
 This means embeddings allow us to build much more generalisable models–instead of the network needing to scramble to learn many disparate ways to handle disconnected input, we instead let similar words “share” parameters and computation paths.
 If we take 5 example words from our vocabulary (say… the words “aardvark”, “black”, “cat”, “duvet” and “zombie”) and examine their embedding vectors created by the one-hot encoding method discussed above, the result would look like this:
-![Hello](https://miro.medium.com/max/1286/1*AzOH04Gp1XrYPthCurFPfQ.jpeg)
+![Hello](https://miro.medium.com/max/1286/1*AzOH04Gp1XrYPthCurFPfQ.jpeg | width=100)
 
 ## Word Embedding Algorithms
 
@@ -68,30 +69,11 @@ ELMO word vectors are computed on top of a two-layer bidirectional language mode
 ![ELMO](https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2019/03/output_YyJc8E.gif)
 ![hi](https://miro.medium.com/max/711/1*_HsSVBam0IZc2LqbbkzC-A.png)
 
-
-## Code
-
-Importing libraries
-``` python
-import tensorflow as tf
-import tensorflow_hub as hub
-import pandas as pd
-from sklearn import preprocessing
-import keras
-import numpy as np
-from keras.layers import Input, Lambda, Dense
-from keras.models import Model
-import keras.backend as K
-```
-importing Pre-trained ELMO model from Tf-Hub
-``` python
-url = "https://tfhub.dev/google/elmo/2"
-embed = hub.Module(url)
-```
-
-
-
 ## Submitted By :
 * Abhisht Tiwari 
 * Ayush Agarwal
+
+## References
+
+
 
